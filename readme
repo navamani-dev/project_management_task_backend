@@ -1,0 +1,76 @@
+# Project Setup Guide
+
+## 📋 Prerequisites
+
+Before running the project, ensure you have installed:
+
+- Node.js (v14+ recommended)
+- npm (Node Package Manager)
+- PostgreSQL
+
+### Check Installation
+
+Run the following commands in your terminal to verify:
+
+```bash
+node -v
+npm -v
+psql --version
+```
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the Project
+
+```bash
+# Clone repository
+git clone <repository-url>
+
+# Navigate into the project folder
+cd <project-folder>
+
+# Navigate into backend directory
+cd backend
+```
+
+### 2. Install Dependencies
+
+Run the command below to install all dependencies listed in `package.json`:
+
+```bash
+npm install
+```
+
+## 🗄️ Database Setup
+
+1. Start your PostgreSQL service or open pgAdmin.
+2. Create a new database named `ismo`:
+
+```sql
+CREATE DATABASE ismo;
+```
+
+3. Connect to the `ismo` database using the Query Tool to run your migration scripts or table definitions.
+
+## 🏃 Run the Application
+
+Navigate to the `backend` folder and start the server:
+
+```bash
+# Start server with Node.js
+node app.js
+
+# Or start in development mode using nodemon (if configured in scripts)
+npm run dev
+```
+
+### Expected Terminal Output:
+
+```
+Server running on port 5000
+Database connected
+```
+
+## 🌐 Backend Base URL
+
+`http://localhost:5000`
