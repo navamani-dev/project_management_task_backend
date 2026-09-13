@@ -20,10 +20,10 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("/api/auth",authLimiter, authRoutes);
-app.use("/api/projects", projectRoutes);
-app.use("/api/tasks", taskRoutes);
-app.use("/api/dashboard", dashboardRoutes);
+app.use("/auth",authLimiter, authRoutes);
+app.use("/projects", projectRoutes);
+app.use("/tasks", taskRoutes);
+app.use("/dashboard", dashboardRoutes);
 
 const PORT = process.env.PORT || 5000;
 pool.query("SELECT NOW()", (err, result) => {
